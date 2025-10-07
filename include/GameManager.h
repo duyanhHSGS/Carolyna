@@ -1,31 +1,27 @@
-#ifndef GAME_MANAGER_H
-#define GAME_MANAGER_H
+#pragma once
 
 #include <string>
 #include <vector>
 
+#include "ChessAI.h"
 #include "ChessBoard.h"
 #include "Move.h"
 #include "MoveGenerator.h"
-#include "ChessAI.h"
 #include "UciHandler.h"
 
-class GameManager {
-public:
-    GameManager();
+namespace GameManager
+{
 
-    void run();
+// Inline globals = shared across translation units
+inline ChessBoard board{};
+inline ChessAI chess_ai{};
+inline UciHandler uci_handler{};
 
-private:
-    ChessBoard board;
-    ChessAI chess_ai;
-    UciHandler uci_handler; 
+void run();
 
-    void handleUciCommand();
-    void handleIsReadyCommand();
-    void handleUciNewGameCommand();
-    void handlePositionCommand(const std::string& command_line);
-    void handleGoCommand();
-};
-
-#endif // GAME_MANAGER_H
+void handleUciCommand();
+void handleIsReadyCommand();
+void handleUciNewGameCommand();
+void handlePositionCommand(const std::string &command_line);
+void handleGoCommand();
+} // namespace GameManager
