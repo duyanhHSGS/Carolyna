@@ -21,7 +21,7 @@
 ### 1.  Clone / Download
 
 ```
-git clone https://github.com/YourUsername/Carolyna.git
+git clone https://github.com/duyanhHSGS/Carolyna.git
 cd Carolyna
 ```
 
