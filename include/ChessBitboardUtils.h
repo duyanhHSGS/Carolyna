@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CHESS_BITBOARD_UTILS_H
+#define CHESS_BITBOARD_UTILS_H
 
 #include <array>
 #include <cstdint>
@@ -127,3 +128,5 @@ struct ChessBitboardUtils {
     static uint64_t generate_king_attacks(int sq);
     static uint64_t generate_pawn_attacks(int sq, PlayerColor color);
 };
+
+#endif  // CHESS_BITBOARD_UTILS_H

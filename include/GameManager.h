@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_MANAGER_H
+#define GAME_MANAGER_H
 
 #include <string>
 #include <vector>
@@ -23,3 +24,5 @@ void handleUciNewGameCommand();
 void handlePositionCommand(const std::string& command_line);
 void handleGoCommand();
 }  // namespace GameManager
+
+#endif  // GAME_MANAGER_H
